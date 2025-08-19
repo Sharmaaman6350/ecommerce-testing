@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: Vyntraa_Ecommerce
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist

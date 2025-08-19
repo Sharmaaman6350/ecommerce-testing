@@ -1,0 +1,143 @@
+###
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+    "name":"Ranu",
+    "email":"ranu@gmail.com",
+    "password":"123456"
+
+}
+
+###
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"ranumali2255@gmail.com",
+    "password":"123456"
+}
+
+###
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+    "name":"Rahul",
+    "email":"rahul2255@gmail.com",
+    "password":"123456",
+    "role":"admin"
+
+}
+
+###
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"rahul2255@gmail.com",
+    "password":"123456"
+}
+
+###
+GET http://localhost:8000/api/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMzEwNWY3MWVkZTk5MWM3MmY3YyIsInJvbGUiOiJhZG1pbiIsIm5hbWUiOiJSYWh1bCIsImVtYWlsIjoicmFodWwyMjU1QGdtYWlsLmNvbSIsImlhdCI6MTc1NTE0NzY1NCwiZXhwIjoxNzU1NzUyNDU0fQ.9zYULKKfdfjQRpaoiDgX0qxX2Dn-dc4SqIi4BmqkSso
+
+
+###
+GET http://localhost:8000/api/payment/myOrders/6891d2915f71ede991c72f78
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMjkxNWY3MWVkZTk5MWM3MmY3OCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU0NDY1MjA5LCJleHAiOjE3NTUwNzAwMDl9.TakezBnrdsr6ixa4B7UgJgIlnn7tmZH9CYBCKM1Xn64
+
+
+###
+GET http://localhost:8000/api/payment/admin/allOrders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMzEwNWY3MWVkZTk5MWM3MmY3YyIsImVtYWlsIjoicmFodWwyMjU1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NTA3NTQ3MywiZXhwIjoxNzU1NjgwMjczfQ.qpv3dRXsvyjb0HP-Kx7gPwkrqnNJ09izIU-Ng5HYHB0
+
+
+###
+GET http://localhost:8000/api/payment/admin/allPayments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMzEwNWY3MWVkZTk5MWM3MmY3YyIsImVtYWlsIjoicmFodWwyMjU1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NTA3NTQ3MywiZXhwIjoxNzU1NjgwMjczfQ.qpv3dRXsvyjb0HP-Kx7gPwkrqnNJ09izIU-Ng5HYHB0
+
+
+
+
+### Update Order Status
+PUT http://localhost:8000/api/payment/admin/statusUpdate/order_R4gxdN27FN4iaO
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMzEwNWY3MWVkZTk5MWM3MmY3YyIsImVtYWlsIjoicmFodWwyMjU1QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NTA3NTQ3MywiZXhwIjoxNzU1NjgwMjczfQ.qpv3dRXsvyjb0HP-Kx7gPwkrqnNJ09izIU-Ng5HYHB0
+Content-Type: application/json
+
+{
+  "status": "Cancelled"
+}
+
+
+
+
+
+
+
+
+
+
+
+###
+POST http://localhost:8000/api/product/add
+Content-Type: application/json
+
+{
+  "title": "Saree",
+  "freeDelivery": true,
+  "category": "Women Ethnic",
+  "type": "Cotton Sarees",
+  "subcategory": "Silk Blend",
+  "price": 99,
+  "description": "Wow",
+  "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2FyZWV8ZW58MHx8MHx8fDA%3D",
+  "stock": 30,
+  "size": ["Free Size"] 
+}
+
+
+###
+GET http://localhost:8000/api/product/get
+Content-Type: application/json
+
+###
+PUT http://localhost:8000/api/product/update/6891935c9f6099b9cf3b7b9d
+Content-Type: application/json
+
+{
+"name":"Bottle",
+"category":"Accessories",
+"price":199,
+"image":"https://images.unsplash.com/photo-1544003484-3cd181d17917?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym90dGxlfGVufDB8fDB8fHww",
+"stock":30
+}
+
+
+###
+DELETE  http://localhost:8000/api/product/delete/6891935c9f6099b9cf3b7b9d
+Content-Type: application/json
+
+
+###
+GET  http://localhost:8000/api/payment/myOrders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMjkxNWY3MWVkZTk5MWM3MmY3OCIsImVtYWlsIjoicmFudW1hbGkyMjU1QGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1MDYwNDUwLCJleHAiOjE3NTU2NjUyNTB9.5oRG462L9ibrtNEom5GZCo_iRmgHHBqVNvI-q5gQVrU
+
+
+###
+GET http://localhost:8000/api/profile/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMjkxNWY3MWVkZTk5MWM3MmY3OCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU0NDY1MjA5LCJleHAiOjE3NTUwNzAwMDl9.TakezBnrdsr6ixa4B7UgJgIlnn7tmZH9CYBCKM1Xn64
+
+###
+PUT http://localhost:8000/api/profile/updateProfile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OTFkMjkxNWY3MWVkZTk5MWM3MmY3OCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU0NDY1MjA5LCJleHAiOjE3NTUwNzAwMDl9.TakezBnrdsr6ixa4B7UgJgIlnn7tmZH9CYBCKM1Xn64
+
+{
+
+"name": "Ranu Saini",
+"email": "ranumali2255@gmail.com"
+      
+
+}

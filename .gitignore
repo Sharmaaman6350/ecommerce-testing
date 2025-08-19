@@ -1,0 +1,45 @@
+# =============================
+# Node / Backend
+# =============================
+node_modules/
+.env
+.env.local
+.env.*.local
+/build
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# =============================
+# Frontend (React / Vite)
+# =============================
+client/node_modules/
+client/.env
+client/.env.local
+client/build
+client/dist      # Keep ignored normally; use -f to add manually if needed
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =============================
+# Misc / System
+# =============================
+*.swp
+*.bak
+*.tmp
+*.cache
+
+# Optional: for production builds
+*.tgz
